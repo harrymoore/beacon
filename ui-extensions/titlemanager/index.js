@@ -1,12 +1,12 @@
 define(function(require) {
 
-    // page: "titlemanger-products-list"
-    require("./gadgets/titlemanger-products-list/titlemanger-products-list.js");
+    // page: "titlemanager-products-list"
+    require("./gadgets/titlemanager-products-list/titlemanager-products-list.js");
 
-    // dashlet: "titlemanger-notifications-dashlet"
-    require("./gadgets/titlemanger-notifications-dashlet/titlemanger-notifications-dashlet.js");
+    // dashlet: "titlemanager-notifications-dashlet"
+    require("./gadgets/titlemanager-notifications-dashlet/titlemanager-notifications-dashlet.js");
 
     // global CSS overrides
-    require("css!./styles/titlemanger.css");
+    require("css!./styles/titlemanager.css");
 
 });

@@ -3,8 +3,8 @@
     "config": {
         "context": {
             "items": [{
-                "key": "catalog/header",
-                "title": "Catalog",
+                "key": "titlemanager/header",
+                "title": "Title Management",
                 "order": 10000,
                 "header": true,
                 "iconClass": "fa fa-dashboard",
@@ -13,9 +13,9 @@
                 "rejectAuthority": [],
                 "rejectPermission": [],
                 "items": [{
-                    "key": "sample/products",
-                    "title": "Products",
-                    "uri": "#/projects/{projectId}/products",
+                    "key": "titlemanager/products",
+                    "title": "Title Product Schedules",
+                    "uri": "#/projects/{projectId}/titlemanagerschedules",
                     "iconClass": "fa fa-pencil",
                     "allowPermission": [
                         "manager"

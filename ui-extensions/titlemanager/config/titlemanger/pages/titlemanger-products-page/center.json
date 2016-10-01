@@ -1,8 +1,8 @@
 {
-    "type": "titlemanger-products-list",
+    "type": "titlemanager-products-list",
     "config": {
         "chrome": {
-            "title": "Product List"
+            "title": "Title Project Schedules List"
         }
     }
 }

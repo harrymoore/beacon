@@ -33,13 +33,14 @@ define(function(require, exports, module) {
 
                     // all of the products
                     var products = this.asArray();
+                    for(var i = 0; i < products.length; i++) {
+                        var product = products[i];
 
-                    // keep one at random
-                    var product = model.product = products[Math.floor(Math.random() * products.length)];
+                        product.imageUrl = "/preview/repository/" + product.getRepositoryId() + "/branch/" + product.getBranchId() + "/node/" + product.getId() + "/default?size=64&name=preview64";
+                    }
 
-                    // add "imageUrl" value to product (retrieve preview of width 256)
-                    product.imageUrl = "/preview/repository/" + product.getRepositoryId() + "/branch/" + product.getBranchId() + "/node/" + product.getId() + "/default?size=256&name=preview256";
-
+                    model.products = products;
+                    
                     callback();
                 });
             });

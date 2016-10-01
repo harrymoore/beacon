@@ -1,6 +1,6 @@
 {
-    "title": "Title Management Products",
-    "uri": "/projects/{projectId}/products",
+    "title": "Title Management Product Schedules",
+    "uri": "/projects/{projectId}/titlemanagerschedules",
     "extends": "project/_project",
     "template": "titlemanager-template"
 }

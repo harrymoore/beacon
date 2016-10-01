@@ -12,8 +12,8 @@
             "rows": [{
                 "columns": [{
                     "dashlets": [{
-                        "title": "Random Product",
-                        "type": "sample-random-product-dashlet",
+                        "title": "Title Project Notifications",
+                        "type": "titlemanager-notifications-dashlet",
                         "chrome": true
                     }]
                 }]

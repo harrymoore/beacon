@@ -1,13 +1,13 @@
 define(function(require, exports, module) {
 
-    require("css!./sample-products-list.css");
-    var html = require("text!./sample-products-list.html");
+    require("css!./titlemanager-products-list.css");
+    var html = require("text!./titlemanager-products-list.html");
 
     var Empty = require("ratchet/dynamic/empty");
 
     var UI = require("ui");
 
-    return UI.registerGadget("sample-products-list", Empty.extend({
+    return UI.registerGadget("titlemanager-products-list", Empty.extend({
 
         TEMPLATE: html,
 
@@ -51,6 +51,7 @@ define(function(require, exports, module) {
 
                         product.imageUrl256 = "/preview/repository/" + product.getRepositoryId() + "/branch/" + product.getBranchId() + "/node/" + product.getId() + "/default?size=256&name=preview256&force=true";
                         product.imageUrl128 = "/preview/repository/" + product.getRepositoryId() + "/branch/" + product.getBranchId() + "/node/" + product.getId() + "/default?size=128&name=preview128&force=true";
+                        product.imageUrl64 = "/preview/repository/" + product.getRepositoryId() + "/branch/" + product.getBranchId() + "/node/" + product.getId() + "/default?size=64&name=preview64&force=true";
                         product.browseUrl = "/#/projects/" + project._doc + "/documents/" + product._doc;
                     }
 

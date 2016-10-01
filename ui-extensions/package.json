@@ -1,9 +1,9 @@
 {
-  "name": "cloudcms-ui-sample-addon",
+  "name": "cloudcms-titlemanager-ui-module",
   "version": "1.0.0",
   "devDependencies": {
-    "grunt": "0.4.5",
-    "grunt-contrib-clean": "0.6.0",
+    "grunt": "1.0.1",
+    "grunt-contrib-clean": "1.0.0",
     "grunt-requirejs": "^0.4.2"
   }
 }
