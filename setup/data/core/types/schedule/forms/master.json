@@ -1,0 +1,95 @@
+{
+    "title": "Production Schedule",
+    "engineId": "alpaca1",
+    "_form_key": "master",
+    "fields": {
+        "title": {
+            "type": "text",
+            "label": "Title"
+        },
+        "scheduleType": {
+            "type": "select",
+            "label": "Product Type",
+            "required": true,
+            "enum": [
+                "Book",
+                "Cover",
+                "Reprint",
+                "ePub"
+            ]
+        },
+        "author": {
+            "type": "text",
+            "label": "Author"
+        },
+        "bookTitle": {
+            "type": "text",
+            "label": "Book Title"
+        },
+        "isbn": {
+            "type": "text",
+            "label": "ISBN"
+        },
+        "note": {
+            "type": "textarea",
+            "label": "Schedule Note"
+        },
+        "schedule": {
+            "type": "object",
+            "label": "Schedule",
+            "required": true,
+            "fields": {
+                "ms2prd": {
+                    "type": "object",
+                    "label": "MStoPRD",
+                    "required": true,
+                    "fields": {
+                        "scheduledDate": {
+                            "type": "date",
+                            "label": "Scheduled Data"
+                        },
+                        "actualDate": {
+                            "type": "date",
+                            "label": "Actual Completed Date"
+                        }
+                    }
+                },
+                "ms2copyeditor": {
+                    "type": "object",
+                    "label": "MStoEditor",
+                    "required": true,
+                    "fields": {
+                        "scheduledDate": {
+                            "type": "date",
+                            "label": "Scheduled Data"
+                        },
+                        "actualDate": {
+                            "type": "date",
+                            "label": "Actual Completed Date"
+                        }
+                    }
+                },
+                "editedms2author": {
+                    "type": "object",
+                    "label": "EditedMStoAuthor",
+                    "required": true,
+                    "fields": {
+                        "scheduledDate": {
+                            "type": "date",
+                            "label": "Scheduled Data"
+                        },
+                        "actualDate": {
+                            "type": "date",
+                            "label": "Actual Completed Date"
+                        }
+                    },
+                    "dependencies": {
+                        "scheduleType": [
+                            "Book"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

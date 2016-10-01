@@ -1,0 +1,101 @@
+{
+    "title": "Production Schedule",
+    "description": "Publishing Production Schedule",
+    "_qname": "beacon:schedule",
+    "_type": "d:type",
+    "_parent": "n:node",
+    "type": "object",
+    "properties": {
+        "title": {
+            "title": "Title",
+            "type": "string",
+            "required": true
+        },
+        "scheduleType": {
+            "type": "string",
+            "title": "Schedule Type",
+            "enum": [
+                "Book",
+                "Cover",
+                "Reprint",
+                "ePub"
+            ],
+            "default": "Book"
+        },
+        "author": {
+            "type": "string",
+            "title": "Author"
+        },
+        "bookTitle": {
+            "type": "string",
+            "title": "Book/Cover Title"
+        },
+        "isbn": {
+            "type": "string",
+            "title": "ISBN"
+        },
+        "note": {
+            "type": "string",
+            "title": "Schedule Note"
+        },
+        "schedule": {
+            "title": "Schedule Type",
+            "type": "object",
+            "properties": {
+                "ms2prd": {
+                    "title": "MStoPRD",
+                    "type": "object",
+                    "properties": {
+                        "scheduledDate": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "Scheduled Date"
+                        },           
+                        "actualDate": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "Actual Completed Date"
+                        }            
+                    }
+                },
+                "ms2copyeditor": {
+                    "title": "MStoCopyeditor",
+                    "type": "object",
+                    "properties": {
+                        "scheduledDate": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "Scheduled Date"
+                        },           
+                        "actualDate": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "Actual Completed Date"
+                        }            
+                    }
+                },
+                "editedms2author": {
+                    "title": "EditedMStoAuthor",
+                    "type": "object",
+                    "properties": {
+                        "scheduledDate": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "Scheduled Date"
+                        },           
+                        "actualDate": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "Actual Completed Date"
+                        }            
+                    }
+                }
+            }
+        }
+    },
+    "dependencies": {
+        "schedule.editedms2author": [
+            "scheduleType"
+        ]
+    }
+}
