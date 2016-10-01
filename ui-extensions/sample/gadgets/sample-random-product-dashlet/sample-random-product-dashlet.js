@@ -29,7 +29,7 @@ define(function(require, exports, module) {
             this.base(el, model, function() {
 
                 // query for catalog:product instances
-                branch.queryNodes({ "_type": "catalog:product" }).then(function() {
+                branch.queryNodes({ "_type": "beacon:schedule" }).then(function() {
 
                     // all of the products
                     var products = this.asArray();

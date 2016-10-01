@@ -1,11 +1,11 @@
 define(function(require, exports, module) {
 
-    var html = require("text!./sample-random-product-dashlet.html");
-    require("css!./sample-random-product-dashlet.css");
+    var html = require("text!./titlemanager-notifications-dashlet.html");
+    require("css!./titlemanager-notifications-dashlet.css");
 
     var UI = require("ui");
 
-    return UI.registerDashlet("sample-random-product-dashlet", UI.AbstractDashlet.extend({
+    return UI.registerDashlet("titlemanager-notifications-dashlet", UI.AbstractDashlet.extend({
 
         TEMPLATE: html,
 
