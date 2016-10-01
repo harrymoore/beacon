@@ -12,7 +12,7 @@
             "rows": [{
                 "columns": [{
                     "dashlets": [{
-                        "title": "Title Project Notifications",
+                        "title": "Title Manager Project Notifications",
                         "type": "titlemanager-notifications-dashlet",
                         "chrome": true
                     }]
@@ -20,5 +20,5 @@
             }]
         }
     },
-    "order": 10000
+    "order": 4999
 }
