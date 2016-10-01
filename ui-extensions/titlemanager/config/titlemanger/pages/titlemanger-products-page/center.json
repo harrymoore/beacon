@@ -1,0 +1,8 @@
+{
+    "type": "titlemanger-products-list",
+    "config": {
+        "chrome": {
+            "title": "Product List"
+        }
+    }
+}
