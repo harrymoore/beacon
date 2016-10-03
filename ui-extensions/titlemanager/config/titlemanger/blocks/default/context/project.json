@@ -13,18 +13,18 @@
                 "rejectAuthority": [],
                 "rejectPermission": [],
                 "items": [{
-                    "key": "titlemanager/products",
-                    "title": "Title Product Schedules",
-                    "uri": "#/projects/{projectId}/titlemanagerschedules",
-                    "iconClass": "fa fa-pencil",
+                    "key": "titlemanager/reports",
+                    "title": "Reports",
+                    "uri": "#/projects/{projectId}/titlemanagerreports",
+                    "iconClass": "fa fa-pie-chart",
                     "allowPermission": [
                         "manager"
                     ]
                 },{
-                    "key": "titlemanager/reports",
-                    "title": "Product Reports",
-                    "uri": "#/projects/{projectId}/titlemanagerreports",
-                    "iconClass": "fa fa-reports",
+                    "key": "titlemanager/products",
+                    "title": "Schedules",
+                    "uri": "#/projects/{projectId}/titlemanagerschedules",
+                    "iconClass": "fa fa-table",
                     "allowPermission": [
                         "manager"
                     ]
