@@ -1,15 +1,99 @@
-{{#each products}}
-<div class="media">
-    <div class="media-left">
-        <a href="#" class="media-popup" data-media-index="{{@index}}">
-            <img class="media-object" src="{{imageUrl128}}" alt="{{title}}">
-        </a>
+<div id="DataTables_Table_3_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="dataTables_length" id="DataTables_Table_3_length"><label>Display <select name="DataTables_Table_3_length" aria-controls="DataTables_Table_3" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option><option value="999999">All</option></select> add-ons per page</label></div>
+        </div>
+        <div class="col-md-6">
+            <div id="DataTables_Table_3_filter" class="dataTables_filter"><label>Filter:<input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_3" style="width: initial;"></label></div>
+        </div>
     </div>
-    <div class="media-body">
-        <h4 class="media-heading">
-            <a href="{{browseUrl}}">{{title}}</a>
-        </h4>
-        {{description}}
+    <div class="row">
+        <div class="col-md-12">
+            <table style="width: 100%;" class="table table-striped table-bordered table-hover dataTable no-footer" id="DataTables_Table_3"
+                role="grid" aria-describedby="DataTables_Table_3_info">
+                <thead>
+                    <tr role="row">
+                        <th class="list-checkbox-column sorting_disabled" rowspan="1" colspan="1" aria-label="" style="width: 14px;"><input type="checkbox" class="list-check-box-all"></th>
+                        <th class="list-icon-column sorting_disabled"
+                            rowspan="1" colspan="1" aria-label="" style="width: 42px;"></th>
+                        <th nowrap="" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Name" style="width: 695px;">Name</th>
+                        <th nowrap="" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Status" style="width: 55px;">Status</th>
+                        <th nowrap="" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Version" style="width: 66px;">Version</th>
+                        <th nowrap="" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Date" style="width: 197px;">Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr id="GUID1" class="row_GUID1 odd" role="row">
+                        <td class=" list-checkbox-column" style="vertical-align: middle;"><input type="checkbox" class="list-check-box" list-target-object-id="GUID1"></td>
+                        <td class=" list-icon-column">
+                            <div class="addon-icon-64"></div>
+                        </td>
+                        <td>
+                            <h2 class="list-row-info title"><a href="#" data-addon-key="wcm">Web Content Management</a></h2>
+                            <p class="list-row-info description">Adds web content management and publishing to your project</p>
+                        </td>
+                        <td></td>
+                        <td>
+                            <p class="list-row-info addon-version">0.0.1</p>
+                        </td>
+                        <td>
+                            <p class="list-row-info addon-date">Mon Oct 03 2016 09:07:28</p>
+                        </td>
+                    </tr>
+                    <tr id="GUID2" class="row_GUID2 even" role="row">
+                        <td class=" list-checkbox-column" style="vertical-align: middle;"><input type="checkbox" class="list-check-box" list-target-object-id="GUID2"></td>
+                        <td class=" list-icon-column">
+                            <div class="addon-icon-64"></div>
+                        </td>
+                        <td>
+                            <h2 class="list-row-info title"><a href="#" data-addon-key="kaltura">Kaltura Video Integration</a></h2>
+                            <p class="list-row-info description">Integration with Kaltura Video Platform and Open Source Video Engine</p>
+                        </td>
+                        <td></td>
+                        <td>
+                            <p class="list-row-info addon-version">0.0.1</p>
+                        </td>
+                        <td>
+                            <p class="list-row-info addon-date">Mon Oct 03 2016 09:07:28</p>
+                        </td>
+                    </tr>
+                    <tr id="GUID3" class="row_GUID3 odd" role="row">
+                        <td class=" list-checkbox-column" style="vertical-align: middle;"><input type="checkbox" class="list-check-box" list-target-object-id="GUID3"></td>
+                        <td class=" list-icon-column">
+                            <div class="addon-icon-64"></div>
+                        </td>
+                        <td>
+                            <h2 class="list-row-info title"><a href="#" data-addon-key="mathpack">Math Editing for Forms</a></h2>
+                            <p class="list-row-info description">Provides mathematical expression editing from within your CKEditor fields using the MathJax widget
+                                and TeX.</p>
+                        </td>
+                        <td></td>
+                        <td>
+                            <p class="list-row-info addon-version">0.0.1</p>
+                        </td>
+                        <td>
+                            <p class="list-row-info addon-date">Mon Oct 03 2016 09:07:28</p>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="dataTables_info" id="DataTables_Table_3_info" role="status" aria-live="polite" style="display: none;">Showing 0 to 0 of 0 add-ons</div>
+        </div>
+        <div class="col-md-8">
+            <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_3_paginate" style="display: none;">
+                <ul class="pagination">
+                    <li class="paginate_button previous disabled" aria-controls="DataTables_Table_3" tabindex="0" id="DataTables_Table_3_previous"><a href="#">Previous</a></li>
+                    <li class="paginate_button next disabled" aria-controls="DataTables_Table_3"
+                        tabindex="0" id="DataTables_Table_3_next"><a href="#">Next</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
-{{/each}}

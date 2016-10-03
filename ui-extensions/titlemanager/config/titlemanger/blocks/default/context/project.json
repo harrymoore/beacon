@@ -5,7 +5,7 @@
             "items": [{
                 "key": "titlemanager/header",
                 "title": "Title Management",
-                "order": 10000,
+                "order": 2000,
                 "header": true,
                 "iconClass": "fa fa-dashboard",
                 "allowAuthority": ["manager"],
@@ -17,6 +17,14 @@
                     "title": "Title Product Schedules",
                     "uri": "#/projects/{projectId}/titlemanagerschedules",
                     "iconClass": "fa fa-pencil",
+                    "allowPermission": [
+                        "manager"
+                    ]
+                },{
+                    "key": "titlemanager/reports",
+                    "title": "Product Reports",
+                    "uri": "#/projects/{projectId}/titlemanagerreports",
+                    "iconClass": "fa fa-reports",
                     "allowPermission": [
                         "manager"
                     ]
