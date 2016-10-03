@@ -10,6 +10,8 @@ define(function(require, exports, module) {
     return UI.registerGadget("titlemanager-products-list", Empty.extend({
 
         TEMPLATE: html,
+        template: html,
+        html: html,
 
         /**
          * Binds this gadget to the /products route

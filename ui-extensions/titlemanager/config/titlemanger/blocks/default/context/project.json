@@ -1,5 +1,12 @@
 {
-    "evaluator": "context-project",
+    "evaluator": "and",
+    "condition": [{
+        "evaluator": "context-project",
+        "condition": true
+    }, {
+        "evaluator": "uri-match",
+        "condition": "/projects/27ea750b20fdc81db83a"
+    }],
     "config": {
         "context": {
             "items": [{
@@ -12,23 +19,26 @@
                 "allowPermission": ["read"],
                 "rejectAuthority": [],
                 "rejectPermission": [],
-                "items": [{
-                    "key": "titlemanager/reports",
-                    "title": "Reports",
-                    "uri": "#/projects/{projectId}/titlemanagerreports",
-                    "iconClass": "fa fa-pie-chart",
-                    "allowPermission": [
-                        "manager"
-                    ]
-                },{
-                    "key": "titlemanager/products",
-                    "title": "Schedules",
-                    "uri": "#/projects/{projectId}/titlemanagerschedules",
-                    "iconClass": "fa fa-table",
-                    "allowPermission": [
-                        "manager"
-                    ]
-                }]
+                "items": [
+                    {
+                        "key": "titlemanager/products",
+                        "title": "Schedules",
+                        "uri": "#/projects/{projectId}/titlemanagerschedules",
+                        "iconClass": "fa fa-table",
+                        "allowPermission": [
+                            "manager"
+                        ]
+                    },
+                    {
+                        "key": "titlemanager/reports",
+                        "title": "Reports",
+                        "uri": "#/projects/{projectId}/titlemanagerreports",
+                        "iconClass": "fa fa-pie-chart",
+                        "allowPermission": [
+                            "manager"
+                        ]
+                    }
+                ]
             }]
         }
     }
