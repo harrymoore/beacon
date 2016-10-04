@@ -1,8 +1,8 @@
 {    
     "evaluator": "and",
     "condition": [{
-        "evaluator": "context-project",
-        "condition": true
+        "evaluator": "project-has-module",
+        "condition": "titlemanager"
     }, {
         "evaluator": "uri-match",
         "condition": "/projects/{projectId}"
