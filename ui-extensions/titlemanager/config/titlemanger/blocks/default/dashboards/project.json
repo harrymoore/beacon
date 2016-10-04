@@ -5,7 +5,7 @@
         "condition": true
     }, {
         "evaluator": "uri-match",
-        "condition": "/projects/27ea750b20fdc81db83a"
+        "condition": "/projects/{projectId}"
     }],
     "config": {
         "dashboard": {
