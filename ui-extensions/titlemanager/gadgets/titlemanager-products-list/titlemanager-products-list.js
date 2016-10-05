@@ -77,7 +77,7 @@ define(function(require, exports, module) {
             var self = this;
             var projectId = self.observable("project").get()._doc;
 
-            return "#/projects/" + projectId + "/titlemanager-products/" + row._doc;
+            return "#/projects/" + projectId + "/titlemanagerschedules/" + row._doc;
         },
 
         iconClass: function(row)
