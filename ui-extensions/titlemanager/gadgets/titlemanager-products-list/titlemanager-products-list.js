@@ -1,111 +1,111 @@
 define(function(require, exports, module) {
 
     require("css!./titlemanager-products-list.css");
-    var html = require("text!./titlemanager-products-list.html");
 
-    var Empty = require("ratchet/dynamic/empty");
+    var Ratchet = require("ratchet/web");
+    var DocList = require("ratchet/dynamic/doclist");
+    var OneTeam = require("oneteam");
+    var bundle = Ratchet.Messages.using();
 
-    var UI = require("ui");
+    return Ratchet.GadgetRegistry.register("titlemanager-products-list", DocList.extend({
 
-    return UI.registerGadget("titlemanager-products-list", Empty.extend({
+        configureDefault: function()
+        {
+            this.base();
 
-        TEMPLATE: html,
-        template: html,
-        html: html,
-
-        /**
-         * Binds this gadget to the /products route
-         */
-        setup: function() {
-            this.get("/projects/{projectId}/products", this.index);
-        },
-
-        /**
-         * Puts variables into the model for rendering within our template.
-         * Once we've finished setting up the model, we must fire callback().
-         *
-         * @param el
-         * @param model
-         * @param callback
-         */
-        prepareModel: function(el, model, callback) {
-
-            // get the current project
-            var project = this.observable("project").get();
-
-            // the current branch
-            var branch = this.observable("branch").get();
-
-            // call into base method and then set up the model
-            this.base(el, model, function() {
-
-                // query for catalog:product instances
-                branch.queryNodes({ "_type": "beacon:schedule" }).then(function() {
-
-                    // store "products" on the model (as a list) and then fire callback
-                    model.products = this.asArray();
-
-                    // add "imageUrl" attribute to each product
-                    // add "browseUrl" attribute to each product
-                    for (var i = 0; i < model.products.length; i++)
-                    {
-                        var product = model.products[i];
-
-                        product.imageUrl256 = "/preview/repository/" + product.getRepositoryId() + "/branch/" + product.getBranchId() + "/node/" + product.getId() + "/default?size=256&name=preview256&force=true";
-                        product.imageUrl128 = "/preview/repository/" + product.getRepositoryId() + "/branch/" + product.getBranchId() + "/node/" + product.getId() + "/default?size=128&name=preview128&force=true";
-                        product.imageUrl64 = "/preview/repository/" + product.getRepositoryId() + "/branch/" + product.getBranchId() + "/node/" + product.getId() + "/default?size=64&name=preview64&force=true";
-                        product.browseUrl = "/#/projects/" + project._doc + "/documents/" + product._doc;
-                    }
-
-                    callback();
-                });
+            this.config({
+                "observables": {
+                    "query": "titlemanager-products-list_query",
+                    "sort": "titlemanager-products-list_sort",
+                    "sortDirection": "titlemanager-products-list_sortDirection",
+                    "searchTerm": "titlemanager-products-list_searchTerm",
+                    "selectedItems": "titlemanager-products-list_selectedItems"
+                }
             });
         },
 
-        /**
-         * This method gets called before the rendered DOM element is injected into the page.
-         *
-         * @param el the dom element
-         * @param model the model used to render the template
-         * @param callback
-         */
-        /*
+        setup: function()
+        {
+            this.get("/projects/{projectId}/titlemanager-products", this.index);
+        },
+
+        prepareModel: function(el, model, callback)
+        {
+            this.base(el, model, function() {
+
+                callback();
+
+            });
+        },
+
         beforeSwap: function(el, model, callback)
         {
+            var self = this;
+
             this.base(el, model, function() {
+
                 callback();
+
             });
         },
-        */
 
-        /**
-         * This method gets called after the rendered DOM element has been injected into the page.
-         *
-         * @param el the new dom element (in page)
-         * @param model the model used to render the template
-         * @param originalContext the dispatch context used to inject
-         * @param callback
-         */
-        afterSwap: function(el, model, originalContext, callback)
+        doGitanaQuery: function(context, model, searchTerm, query, pagination, callback)
         {
-            this.base(el, model, originalContext, function() {
+            var self = this;
 
-                // find all .media-popups and attach to a lightbox
-                $(el).find(".media-popup").click(function(e) {
+            if (!query)
+            {
+                query = {};
+            }
 
-                    e.preventDefault();
+            if (!query._type)
+            {
+                query._type = "beacon:schedule";
+            }
 
-                    var productIndex = $(this).attr("data-media-index");
-                    var product = model.products[productIndex];
+            OneTeam.projectBranch(self, function() {
 
-                    UI.showPopupModal({
-                        "title": "Viewing: " + product.title,
-                        "body": "<div style='text-align:center'><img src='" + product.imageUrl + "'></div>"
-                    });
+                this.queryNodes(query, pagination).then(function() {
+                    callback(this);
                 });
-
-                callback();
             });
+
+        },
+
+        linkUri: function(row, model, context)
+        {
+            var self = this;
+            var projectId = self.observable("project").get()._doc;
+
+            return "#/projects/" + projectId + "/titlemanager-products/" + row._doc;
+        },
+
+        iconClass: function(row)
+        {
+            return null;
+        },
+
+        iconUri: function(row, model, context)
+        {
+            var self = this;
+
+            return OneTeam.nodeStaticUrl(self, {
+                "path": "/Organizations/" + row.organizationName + "/Resources/logo.png",
+                "fallback": "/spacer.gif"
+            });
+        },
+
+        columnValue: function(row, item, model, context)
+        {
+            var self = this;
+
+            var value = this.base(row, item);
+
+            if (item.key == "titleDescription") {
+                value = OneTeam.listTitleDescription(context, row, self.linkUri(row, model, context));
+            }
+
+            return value;
         }
 
     }));

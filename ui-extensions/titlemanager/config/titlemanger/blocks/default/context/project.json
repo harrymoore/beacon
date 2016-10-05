@@ -24,6 +24,7 @@
                         "title": "Schedules",
                         "uri": "#/projects/{projectId}/titlemanagerschedules",
                         "iconClass": "fa fa-table",
+                        "order": 1000,
                         "allowPermission": [
                             "manager"
                         ]
@@ -33,6 +34,7 @@
                         "title": "Reports",
                         "uri": "#/projects/{projectId}/titlemanagerreports",
                         "iconClass": "fa fa-pie-chart",
+                        "order": 2000,
                         "allowPermission": [
                             "manager"
                         ]

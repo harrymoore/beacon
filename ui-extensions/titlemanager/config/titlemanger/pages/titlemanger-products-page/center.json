@@ -1,8 +1,54 @@
 {
     "type": "titlemanager-products-list",
     "config": {
-        "chrome": {
-            "title": "Title Project Schedules List"
+        "chrome": false,
+        "buttons": [],
+        "columns": [],
+        "icon": true,
+        "checkbox": true,
+        "loader": "gitana",
+        "selectorGroups": {
+            "multi-documents-action-selector-group": {
+                "actions": []
+            },
+            "sort-selector-group": {
+                "fields": [{
+                    "key": "title",
+                    "title": "Title",
+                    "field": "title"
+                }, {
+                    "key": "description",
+                    "title": "Description",
+                    "field": "description"
+                }, {
+                    "key": "createdOn",
+                    "title": "Created On",
+                    "field": "_system.created_on.ms"
+                }, {
+                    "key": "createdBy",
+                    "title": "Created By",
+                    "field": "_system.created_by"
+                }, {
+                    "key": "modifiedOn",
+                    "title": "Modified On",
+                    "field": "_system.modified_on.ms"
+                }, {
+                    "key": "modifiedBy",
+                    "title": "Modified By",
+                    "field": "_system.modified_by"
+                }, {
+                    "key": "type",
+                    "title": "Type",
+                    "field": "TYPE"
+                }, {
+                    "key": "size",
+                    "title": "Size",
+                    "field": "size"
+                }]
+            }
+        },
+        "options": {
+            "filter": false
         }
     }
 }
