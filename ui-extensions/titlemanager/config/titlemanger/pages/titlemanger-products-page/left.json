@@ -1,0 +1,6 @@
+{
+    "type": "titlemanager-products-filter",
+    "config": {
+        "chrome": false
+    }
+}

@@ -1,0 +1,9 @@
+.submissions-filter input
+{
+    background-color: inherit !important;
+}
+
+.submissions-filter .btn-group
+{
+    padding: 10px;
+}
