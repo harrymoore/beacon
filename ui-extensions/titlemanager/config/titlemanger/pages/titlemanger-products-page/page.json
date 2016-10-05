@@ -1,5 +1,5 @@
 {
-    "title": "Title Management Product Schedules",
+    "title": "Product Schedules",
     "uri": "/projects/{projectId}/titlemanagerschedules",
     "extends": "project/_project",
     "template": "default-left"

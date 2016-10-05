@@ -26,7 +26,7 @@ define(function(require, exports, module) {
 
         setup: function()
         {
-            this.get("/projects/{projectId}/titlemanager-products", this.index);
+            this.get("/projects/{projectId}/titlemanagerschedules", this.index);
         },
 
         prepareModel: function(el, model, callback)
