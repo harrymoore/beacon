@@ -28,16 +28,6 @@
                         "allowPermission": [
                             "manager"
                         ]
-                    // },
-                    // {
-                    //     "key": "titlemanager/reports",
-                    //     "title": "Reports",
-                    //     "uri": "#/projects/{projectId}/titlemanagerreports",
-                    //     "iconClass": "fa fa-pie-chart",
-                    //     "order": 2000,
-                    //     "allowPermission": [
-                    //         "manager"
-                    //     ]
                     }
                 ]
             }]
