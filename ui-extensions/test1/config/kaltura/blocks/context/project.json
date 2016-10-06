@@ -2,7 +2,7 @@
     "evaluator": "and",
     "condition": [{
         "evaluator": "project-has-module",
-        "condition": "kaltura"
+        "condition": "test1"
     }, {
         "evaluator": "context-project"
     }],
@@ -10,7 +10,7 @@
         "context": {
             "items": [{
                 "key": "project/kaltura/heading",
-                "title": "Kaltura",
+                "title": "Test1",
                 "order": 2700,
                 "header": true,
                 "allowAuthority": [
