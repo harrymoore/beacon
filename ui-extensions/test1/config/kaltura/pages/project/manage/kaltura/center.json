@@ -1,0 +1,6 @@
+{
+    "type": "manage-kaltura",
+    "config": {
+        "chrome": false
+    }
+}

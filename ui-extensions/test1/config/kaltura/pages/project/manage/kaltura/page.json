@@ -1,0 +1,5 @@
+{
+    "title": "Manage Kaltura",
+    "uri": "/projects/{projectId}/manage/kaltura",
+    "extends": "project/manage/_manage"
+}

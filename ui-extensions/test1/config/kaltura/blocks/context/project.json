@@ -1,0 +1,31 @@
+{
+    "evaluator": "and",
+    "condition": [{
+        "evaluator": "project-has-module",
+        "condition": "kaltura"
+    }, {
+        "evaluator": "context-project"
+    }],
+    "config": {
+        "context": {
+            "items": [{
+                "key": "project/kaltura/heading",
+                "title": "Kaltura",
+                "order": 2700,
+                "header": true,
+                "allowAuthority": [
+                    "consumer"
+                ],
+                "items": [{
+                    "key": "project/kaltura/videos",
+                    "title": "Browse Videos",
+                    "uri": "#/projects/{projectId}/kaltura/videos",
+                    "iconClass": "fa fa-video-camera",
+                    "allowAuthority": [
+                        "consumer"
+                    ]
+                }]
+            }]
+        }
+    }
+}

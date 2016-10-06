@@ -1,0 +1,25 @@
+{{#if chrome}}
+<div>
+    <div class="chrome chrome-header">
+        <div class="chrome-title">{{chrome.title}}</div>
+    </div>
+    <div class="chrome chrome-body">
+{{/if}}
+
+
+        <div class="gadget {{#if cssClasses}}{{cssClasses}}{{/if}}">
+
+            <div class="form"></div>
+
+            <div class="pull-right">
+                <button class="btn btn-default update">Update</button>
+            </div>
+            <div style="clear:both"></div>
+
+        </div>
+
+
+{{#if chrome}}
+    </div>
+</div>
+{{/if}}

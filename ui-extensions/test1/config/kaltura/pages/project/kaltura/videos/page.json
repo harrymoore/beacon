@@ -1,0 +1,6 @@
+{
+    "title": "Browse Videos",
+    "uri": "/projects/{projectId}/kaltura/videos",
+    "extends": "project/_project",
+    "template": "default"
+}

@@ -1,0 +1,33 @@
+{
+    "evaluator": "and",
+    "condition": [{
+        "evaluator": "project-has-module",
+        "condition": "kaltura"
+    }, {
+        "evaluator": "context-project"
+    }],
+    "config": {
+        "manage-context": {
+            "items": [{
+                "key": "kaltura/manage",
+                "title": "Kaltura",
+                "order": 100000,
+                "header": true,
+                "allowAuthority": [
+                    "consumer"
+                ],
+                "items": [{
+                    "key": "kaltura/manage/settings",
+                    "title": "Settings",
+                    "uri": "#/projects/{projectId}/manage/kaltura",
+                    "iconClass": "fa fa-angle-right",
+                    "allowAuthority": [
+                        "owner",
+                        "manager",
+                        "admin"
+                    ]
+                }]
+            }]
+        }
+    }
+}
