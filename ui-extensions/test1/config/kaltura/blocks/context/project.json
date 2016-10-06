@@ -10,7 +10,7 @@
         "context": {
             "items": [{
                 "key": "project/kaltura/heading",
-                "title": "Test1",
+                "title": "Kaltura",
                 "order": 2700,
                 "header": true,
                 "allowAuthority": [
