@@ -2,7 +2,7 @@
     "evaluator": "and",
     "condition": [{
         "evaluator": "project-has-module",
-        "condition": "titlemanager"
+        "condition": "titlemanager-XXXXX"
     }, {
         "evaluator": "uri-match",
         "condition": "/projects/{projectId}"

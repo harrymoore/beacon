@@ -28,6 +28,26 @@
                         "allowPermission": [
                             "manager"
                         ]
+                    },
+                    {
+                        "key": "titlemanager/products",
+                        "title": "Reports",
+                        "uri": "#/projects/{projectId}/titlemanagerschedules",
+                        "iconClass": "fa fa-table",
+                        "order": 1001,
+                        "allowPermission": [
+                            "manager"
+                        ]
+                    },
+                    {
+                        "key": "titlemanager/products",
+                        "title": "Perchase Orders",
+                        "uri": "#/projects/{projectId}/titlemanagerschedules",
+                        "iconClass": "fa fa-table",
+                        "order": 1002,
+                        "allowPermission": [
+                            "manager"
+                        ]
                     }
                 ]
             }]
