@@ -3754,9 +3754,9 @@ KalturaVideoCodec.WVC1A = "wvc1a";
 function KalturaVirusScanEngineType(){
 }
 KalturaVirusScanEngineType.CLAMAV_SCAN_ENGINE = "clamAVScanEngine.ClamAV";
-KalturaVirusScanEngineType.SYMANTEC_SCAN_DIRECT_ENGINE = "symantecScanEngine.SymantecScanDirectEngine";
-KalturaVirusScanEngineType.SYMANTEC_SCAN_ENGINE = "symantecScanEngine.SymantecScanEngine";
-KalturaVirusScanEngineType.SYMANTEC_SCAN_JAVA_ENGINE = "symantecScanEngine.SymantecScanJavaEngine";
+KalturaVirusScanEngineType.SYMANTEC_SCAN_DIRECT_ENGINE = "symantecScanEngine.SymantecScanDirectEngine.js";
+KalturaVirusScanEngineType.SYMANTEC_SCAN_ENGINE = "symantecScanEngine.SymantecScanEngine.js";
+KalturaVirusScanEngineType.SYMANTEC_SCAN_JAVA_ENGINE = "symantecScanEngine.SymantecScanJavaEngine.js";
 
 function KalturaVirusScanProfileOrderBy(){
 }

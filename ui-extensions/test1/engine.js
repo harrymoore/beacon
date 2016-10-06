@@ -4,13 +4,13 @@ define(function(require) {
 
     var OneTeam = require("oneteam");
 
-    require("./lib/js/ox.ajast");
-    require("./lib/js/webtoolkit.md5");
-    require("./lib/js/KalturaClientBase");
-    require("./lib/js/KalturaTypes");
-    require("./lib/js/KalturaVO");
-    require("./lib/js/KalturaServices");
-    require("./lib/js/KalturaClient");
+    require("./lib/js/ox.ajast.js");
+    require("./lib/js/webtoolkit.md5.js");
+    require("./lib/js/KalturaClientBase.js");
+    require("./lib/js/KalturaTypes.js");
+    require("./lib/js/KalturaVO.js");
+    require("./lib/js/KalturaServices.js");
+    require("./lib/js/KalturaClient.js");
 
     var loadClient = function() {
         var _client = null;

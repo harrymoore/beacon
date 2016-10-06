@@ -5,7 +5,7 @@ define(function(require, exports, module) {
     var Ratchet = require("ratchet/web");
     var DocList = require("ratchet/dynamic/doclist");
     var OneTeam = require("oneteam");
-    var Engine = require("../../../../engine");
+    var Engine = require("../../../../engine.js");
 
     return Ratchet.GadgetRegistry.register("kaltura-videos-list", DocList.extend({
 

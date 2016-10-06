@@ -6,7 +6,7 @@ define(function(require) {
         OneTeam = require("oneteam");
     }
 
-    var Engine = require("../engine");
+    var Engine = require("../engine.js");
 
     var kalturaVideoPicker = Ratchet.Gadgets.AbstractGitanaPicker.extend({
 
