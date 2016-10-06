@@ -46,9 +46,6 @@
                     "field": "size"
                 }]
             }
-        },
-        "options": {
-            "filter": false
         }
     }
 }
