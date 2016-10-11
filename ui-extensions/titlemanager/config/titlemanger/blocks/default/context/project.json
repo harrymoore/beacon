@@ -31,9 +31,19 @@
                     },
                     {
                         "key": "titlemanager/products",
+                        "title": "Check Lists",
+                        "uri": "#/projects/{projectId}/titlemanagerschedules",
+                        "iconClass": "fa fa-tasks",
+                        "order": 1000,
+                        "allowPermission": [
+                            "manager"
+                        ]
+                    },
+                    {
+                        "key": "titlemanager/products",
                         "title": "Reports",
                         "uri": "#/projects/{projectId}/titlemanagerschedules",
-                        "iconClass": "fa fa-table",
+                        "iconClass": "fa fa-list",
                         "order": 1001,
                         "allowPermission": [
                             "manager"
@@ -43,7 +53,7 @@
                         "key": "titlemanager/products",
                         "title": "Perchase Orders",
                         "uri": "#/projects/{projectId}/titlemanagerschedules",
-                        "iconClass": "fa fa-table",
+                        "iconClass": "fa fa-th-list",
                         "order": 1002,
                         "allowPermission": [
                             "manager"
