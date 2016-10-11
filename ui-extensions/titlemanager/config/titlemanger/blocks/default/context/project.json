@@ -34,7 +34,7 @@
                         "title": "Check Lists",
                         "uri": "#/projects/{projectId}/titlemanagerschedules",
                         "iconClass": "fa fa-tasks",
-                        "order": 1000,
+                        "order": 1001,
                         "allowPermission": [
                             "manager"
                         ]
@@ -44,7 +44,7 @@
                         "title": "Reports",
                         "uri": "#/projects/{projectId}/titlemanagerschedules",
                         "iconClass": "fa fa-list",
-                        "order": 1001,
+                        "order": 1002,
                         "allowPermission": [
                             "manager"
                         ]
@@ -54,7 +54,7 @@
                         "title": "Perchase Orders",
                         "uri": "#/projects/{projectId}/titlemanagerschedules",
                         "iconClass": "fa fa-th-list",
-                        "order": 1002,
+                        "order": 1003,
                         "allowPermission": [
                             "manager"
                         ]
